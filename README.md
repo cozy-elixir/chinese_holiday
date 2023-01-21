@@ -18,7 +18,7 @@ end
 
 ## Usage
 
-For more information, see the [documentation](https://hexdocs.pm/chinese_holiday/ChineseHoliday).
+For more information, see the [documentation](https://hexdocs.pm/chinese_holiday/ChineseHoliday.html).
 
 ## Acknowledgments
 
