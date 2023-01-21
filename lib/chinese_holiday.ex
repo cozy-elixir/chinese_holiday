@@ -40,7 +40,8 @@ defmodule ChineseHoliday do
 
   Following dates will be considered as holidays:
 
-  * dates in holiday schedules which are published by State Council of the People's Republic of China.
+  * dates in holiday schedules which are published by State Council of the People's Republic of China,
+    aka. chinese statutory holiday.
 
   > To get the original information, please visit
   > [中华人民共和国中央人民政府 - 政府信息公开](http://www.gov.cn/zhengce/xxgk/index.htm),

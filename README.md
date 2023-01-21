@@ -1,21 +1,27 @@
 # ChineseHoliday
 
-**TODO: Add description**
+> Provides utilities for handling chinese holiday related problems.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `chinese_holiday` to your list of dependencies in `mix.exs`:
+Add `:chinese_holiday` to the list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:chinese_holiday, "~> 0.1.0"}
+    {:chinese_holiday, version}
   ]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/chinese_holiday>.
+## Usage
 
+For more information, see the [documentation](https://hexdocs.pm/chinese_holiday/ChineseHoliday).
+
+## Acknowledgments
+
+The initial raw data comes from [`bastengao/chinese-holidays-data`](https://github.com/bastengao/chinese-holidays-data).
+
+## License
+
+Apache License 2.0
