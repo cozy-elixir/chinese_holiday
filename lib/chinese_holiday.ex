@@ -92,7 +92,7 @@ defmodule ChineseHoliday do
   Following dates will be considered as working days:
 
   * dates marked as additional working days to compensate for the long holiday break.
-  * dates which are normal weekdays (monday ~ friday).
+  * dates which are normal weekdays (monday ~ friday), and are not in the duration of any holiday.
 
   ## Examples
 
@@ -102,6 +102,10 @@ defmodule ChineseHoliday do
 
       iex> ChineseHoliday.is_working_day?(~D[2023-01-29])
       true
+
+      # weekdays in the duration of one holiday
+      iex> ChineseHoliday.is_working_day?(~D[2023-01-27])
+      false
 
       # normal weekdays
       iex> ChineseHoliday.is_working_day?(~D[2023-01-30])
@@ -140,6 +144,6 @@ defmodule ChineseHoliday do
   def is_working_day?(%Date{} = date) do
     %{year: year, month: month, day: day} = date
     weekday = :calendar.day_of_the_week(year, month, day)
-    weekday in 1..5
+    !is_holiday?(date) and weekday in 1..5
   end
 end
