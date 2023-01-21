@@ -7,12 +7,33 @@ defmodule ChineseHoliday do
   alias __MODULE__.Data
 
   @supported_years Data.get_supported_years()
+  @data_updated_datetime Data.get_updated_datetime()
 
   @doc """
   Gets all the supported years.
+
+  ## Examples
+
+      iex> ChineseHoliday.get_supported_years()
+      [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+
   """
   @spec get_supported_years() :: list()
   def get_supported_years(), do: @supported_years
+
+  @doc """
+  Gets the version of data.
+
+  The version is a plain `%DateTime{}`.
+
+  ## Examples
+
+      iex> ChineseHoliday.get_version()
+      ~U[2022-12-10 02:02:00Z]
+
+  """
+  @spec get_version() :: DateTime.t()
+  def get_version(), do: @data_updated_datetime
 
   @doc """
   Checks if a given date is a holiday.

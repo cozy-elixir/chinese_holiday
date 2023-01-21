@@ -7,6 +7,12 @@ defmodule ChineseHoliday.Data do
     |> Enum.reverse()
   end
 
+  def get_updated_datetime() do
+    get_data()
+    |> List.first()
+    |> Map.fetch!(:updated_at)
+  end
+
   def get_holidays() do
     get_data()
     |> Enum.map(& &1.detail)
@@ -43,7 +49,13 @@ defmodule ChineseHoliday.Data do
     |> File.read!()
     |> Jason.decode!(keys: :atoms!)
     |> Enum.map(fn %{year: year, last_modified: last_modified} ->
-      %{year: year, last_modified: last_modified, detail: get_year_detail(year)}
+      {:ok, updated_at, 0} = DateTime.from_iso8601(last_modified)
+
+      %{
+        year: year,
+        updated_at: updated_at,
+        detail: get_year_detail(year)
+      }
     end)
   end
 
