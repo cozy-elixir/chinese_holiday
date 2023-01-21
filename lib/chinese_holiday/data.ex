@@ -76,5 +76,5 @@ defmodule ChineseHoliday.Data do
   end
 
   defp transform_type!("holiday"), do: :holiday
-  defp transform_type!("workingday"), do: :working_day
+  defp transform_type!("working_day"), do: :working_day
 end

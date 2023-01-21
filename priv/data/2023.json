@@ -12,7 +12,7 @@
   {
     "name": "春节",
     "range": ["2023-01-28", "2023-01-29"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "清明节",
@@ -22,7 +22,7 @@
   {
     "name": "劳动节",
     "range": ["2023-04-23"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "劳动节",
@@ -32,7 +32,7 @@
   {
     "name": "劳动节",
     "range": ["2023-05-06"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "端午节",
@@ -42,7 +42,7 @@
   {
     "name": "端午节",
     "range": ["2023-06-25"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "中秋节/国庆节",
@@ -52,6 +52,6 @@
   {
     "name": "中秋节/国庆节",
     "range": ["2023-10-07", "2023-10-08"],
-    "type": "workingday"
+    "type": "working_day"
   }
 ]

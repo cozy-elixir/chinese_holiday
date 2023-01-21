@@ -7,7 +7,7 @@
   {
     "name": "春节",
     "range": ["2020-01-19"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "春节",
@@ -17,7 +17,7 @@
   {
     "name": "春节",
     "range": ["2020-02-01"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "清明节",
@@ -27,7 +27,7 @@
   {
     "name": "劳动节",
     "range": ["2020-04-26"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "劳动节",
@@ -37,7 +37,7 @@
   {
     "name": "劳动节",
     "range": ["2020-05-09"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "端午节",
@@ -47,12 +47,12 @@
   {
     "name": "端午节",
     "range": ["2020-06-28"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "中秋节/国庆节",
     "range": ["2020-09-27"],
-    "type": "workingday"
+    "type": "working_day"
   },
   {
     "name": "中秋节/国庆节",
@@ -62,6 +62,6 @@
   {
     "name": "中秋节/国庆节",
     "range": ["2020-10-10"],
-    "type": "workingday"
+    "type": "working_day"
   }
 ]
