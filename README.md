@@ -1,5 +1,7 @@
 # ChineseHoliday
 
+[![CI](https://github.com/cozy-elixir/chinese_holiday/actions/workflows/ci.yml/badge.svg)](https://github.com/cozy-elixir/chinese_holiday/actions/workflows/ci.yml)
+
 > Provides utilities for handling chinese holiday related problems.
 
 ## Installation
