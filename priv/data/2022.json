@@ -7,7 +7,7 @@
   {
     "name": "春节",
     "range": ["2022-01-29", "2022-01-30"],
-    "type": "working_day"
+    "type": "workingday"
   },
   {
     "name": "春节",
@@ -17,7 +17,7 @@
   {
     "name": "清明节",
     "range": ["2022-04-02"],
-    "type": "working_day"
+    "type": "workingday"
   },
   {
     "name": "清明节",
@@ -27,7 +27,7 @@
   {
     "name": "劳动节",
     "range": ["2022-04-24"],
-    "type": "working_day"
+    "type": "workingday"
   },
   {
     "name": "劳动节",
@@ -37,7 +37,7 @@
   {
     "name": "劳动节",
     "range": ["2022-05-07"],
-    "type": "working_day"
+    "type": "workingday"
   },
   {
     "name": "端午节",
@@ -57,6 +57,6 @@
   {
     "name": "国庆节",
     "range": ["2022-10-08", "2022-10-09"],
-    "type": "working_day"
+    "type": "workingday"
   }
 ]

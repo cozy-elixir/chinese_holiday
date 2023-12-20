@@ -49,7 +49,11 @@ defmodule ChineseHoliday.Data do
     |> File.read!()
     |> Jason.decode!(keys: :atoms!)
     |> Enum.map(fn %{year: year, last_modified: last_modified} ->
-      {:ok, updated_at, 0} = DateTime.from_iso8601(last_modified)
+      updated_at =
+        last_modified
+        |> NaiveDateTime.from_iso8601!()
+        |> DateTime.from_naive!("Asia/Shanghai", Tz.TimeZoneDatabase)
+        |> DateTime.shift_zone!("Etc/UTC", Tz.TimeZoneDatabase)
 
       %{
         year: year,
@@ -88,10 +92,5 @@ defmodule ChineseHoliday.Data do
   end
 
   defp transform_type!("holiday"), do: :holiday
-  defp transform_type!("working_day"), do: :working_day
-
-  defp transform_type!("workingday" = type) do
-    raise CompileError,
-      description: "unsupported type #{inspect(type)}, please rename it to \"working_day\""
-  end
+  defp transform_type!("workingday"), do: :working_day
 end

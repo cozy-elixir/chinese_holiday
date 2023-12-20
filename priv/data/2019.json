@@ -2,7 +2,7 @@
   {
     "name": "元旦",
     "range": ["2018-12-29"],
-    "type": "working_day"
+    "type": "workingday"
   },
   {
     "name": "元旦",
@@ -12,7 +12,7 @@
   {
     "name": "春节",
     "range": ["2019-02-02", "2019-02-03"],
-    "type": "working_day"
+    "type": "workingday"
   },
   {
     "name": "春节",
@@ -27,7 +27,7 @@
   {
     "name": "劳动节",
     "range": ["2019-04-28"],
-    "type": "working_day"
+    "type": "workingday"
   },
   {
     "name": "劳动节",
@@ -37,7 +37,7 @@
   {
     "name": "劳动节",
     "range": ["2019-05-05"],
-    "type": "working_day"
+    "type": "workingday"
   },
   {
     "name": "端午节",
@@ -52,7 +52,7 @@
   {
     "name": "国庆节",
     "range": ["2019-09-29"],
-    "type": "working_day"
+    "type": "workingday"
   },
   {
     "name": "国庆节",
@@ -62,6 +62,6 @@
   {
     "name": "国庆节",
     "range": ["2019-10-12"],
-    "type": "working_day"
+    "type": "workingday"
   }
 ]
