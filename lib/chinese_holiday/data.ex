@@ -89,4 +89,9 @@ defmodule ChineseHoliday.Data do
 
   defp transform_type!("holiday"), do: :holiday
   defp transform_type!("working_day"), do: :working_day
+
+  defp transform_type!("workingday" = type) do
+    raise CompileError,
+      description: "unsupported type #{inspect(type)}, please rename it to \"working_day\""
+  end
 end
