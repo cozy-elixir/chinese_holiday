@@ -15,6 +15,9 @@
         devShells.default = with pkgs; mkShell {
           packages = [
             beam.packages.erlang_26.elixir_1_15
+
+            curl
+            gnutar
           ];
 
           shellHook = ''
@@ -28,6 +31,9 @@
 
             # limit history to current project
             export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_path '\"$PWD/.erlang-history\"'"
+
+            # add helpers
+            PATH="$PWD/bin":$PATH
           '';
         };
       }

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+curl -L https://api.github.com/repos/bastengao/chinese-holidays-data/tarball \
+  | tar -xvz --strip-components=2  --directory=priv/data --wildcards '*/data/*'
