@@ -1,7 +1,7 @@
 # ChineseHoliday
 
 [![CI](https://github.com/cozy-elixir/chinese_holiday/actions/workflows/ci.yml/badge.svg)](https://github.com/cozy-elixir/chinese_holiday/actions/workflows/ci.yml) [![Hex.pm](https://img.shields.io/hexpm/v/chinese_holiday.svg)](https://hex.pm/packages/chinese_holiday)
-![Nix flakes](https://img.shields.io/badge/Nix%20flakes-5277C3?logo=nixos&logoColor=white)
+[![built with Nix](https://img.shields.io/badge/built%20with%20Nix-5277C3?logo=nixos&logoColor=white)](https://builtwithnix.org)
 
 > Provides utilities for handling chinese holiday related problems.
 
