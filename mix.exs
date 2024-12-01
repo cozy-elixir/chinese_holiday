@@ -1,7 +1,7 @@
 defmodule ChineseHoliday.MixProject do
   use Mix.Project
 
-  @version "0.2.0"
+  @version "1.0.0"
   @description "Provides utilities for handling chinese holiday related problems."
   @source_url "https://github.com/cozy-elixir/chinese_holiday"
   @changelog_url "https://github.com/cozy-elixir/chinese_holiday/blob/v#{@version}/CHANGELOG.md"
