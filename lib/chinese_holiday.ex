@@ -15,7 +15,7 @@ defmodule ChineseHoliday do
   ## Examples
 
       iex> ChineseHoliday.get_supported_years()
-      [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+      [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
 
   """
   @spec get_supported_years() :: list()
@@ -29,7 +29,7 @@ defmodule ChineseHoliday do
   ## Examples
 
       iex> ChineseHoliday.get_version()
-      ~U[2023-11-08 08:31:00Z]
+      ~U[2024-11-30 12:41:00Z]
 
   """
   @spec get_version() :: DateTime.t()
