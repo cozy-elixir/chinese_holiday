@@ -4,6 +4,10 @@
 
 Provides utilities for handling chinese holiday related problems.
 
+> LOOKING FOR A MAINTAINER
+>
+> This package is currently in low-maintenance mode. If you are interested in maintaining it, please email me.
+
 ## Installation
 
 Add `:chinese_holiday` to the list of dependencies in `mix.exs`:
