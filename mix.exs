@@ -4,6 +4,7 @@ defmodule ChineseHoliday.MixProject do
   @version "0.2.0"
   @description "Provides utilities for handling chinese holiday related problems."
   @source_url "https://github.com/cozy-elixir/chinese_holiday"
+  @changelog_url "https://github.com/cozy-elixir/chinese_holiday/blob/v#{@version}/CHANGELOG.md"
 
   def project do
     [
@@ -43,8 +44,7 @@ defmodule ChineseHoliday.MixProject do
 
   defp docs do
     [
-      extras: ["README.md"],
-      main: "readme",
+      extras: ["README.md", "CHANGELOG.md"],
       source_url: @source_url,
       source_ref: @version
     ]
@@ -52,9 +52,11 @@ defmodule ChineseHoliday.MixProject do
 
   defp package do
     [
-      exclude_patterns: [],
       licenses: ["Apache-2.0"],
-      links: %{GitHub: @source_url}
+      links: %{
+        GitHub: @source_url,
+        Changelog: @changelog_url
+      }
     ]
   end
 
