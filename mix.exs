@@ -33,7 +33,7 @@ defmodule ChineseHoliday.MixProject do
     [
       {:jason, ">= 0.0.0"},
       {:tz, "~> 0.26"},
-      {:ex_check, "~> 0.14.0", only: [:dev], runtime: false},
+      {:ex_check, ">= 0.0.0", only: [:dev], runtime: false},
       {:credo, ">= 0.0.0", only: [:dev], runtime: false},
       {:dialyxir, ">= 0.0.0", only: [:dev], runtime: false},
       {:ex_doc, ">= 0.0.0", only: [:dev], runtime: false},
