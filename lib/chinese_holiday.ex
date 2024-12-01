@@ -68,7 +68,7 @@ defmodule ChineseHoliday do
 
   """
   @spec holiday?(Date.t()) :: boolean()
-  def holiday?(%Date{year: year}) when year not in @supported_years do
+  def holiday?(%Date{year: year} = _date) when year not in @supported_years do
     Logger.warning(fn ->
       "the holiday information of #{year} isn't provided by current version of chinese_holiday"
     end)
