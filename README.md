@@ -20,14 +20,6 @@ end
 
 For more information, see the [documentation](https://hexdocs.pm/chinese_holiday/ChineseHoliday.html).
 
-## Development
-
-### Updating data
-
-```console
-$ sync-data
-```
-
 ## Acknowledgments
 
 The raw data comes from [`bastengao/chinese-holidays-data`](https://github.com/bastengao/chinese-holidays-data).
