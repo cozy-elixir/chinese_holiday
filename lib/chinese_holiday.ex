@@ -50,25 +50,25 @@ defmodule ChineseHoliday do
   ## Examples
 
       # the holiday of lunar new year
-      iex> ChineseHoliday.is_holiday?(~D[2023-01-21])
+      iex> ChineseHoliday.holiday?(~D[2023-01-21])
       true
 
       # the holiday of lunar new year
-      iex> ChineseHoliday.is_holiday?(~D[2023-01-27])
+      iex> ChineseHoliday.holiday?(~D[2023-01-27])
       true
 
       # it's time to work ;)
-      iex> ChineseHoliday.is_holiday?(~D[2023-01-28])
+      iex> ChineseHoliday.holiday?(~D[2023-01-28])
       false
 
       # the holiday information is missing, so this function doesn't know how to handle it.
       # in this case, it will log a warning message, and return `false`.
-      iex> ChineseHoliday.is_holiday?(~D[2090-01-28])
+      iex> ChineseHoliday.holiday?(~D[2090-01-28])
       false
 
   """
-  @spec is_holiday?(Date.t()) :: boolean()
-  def is_holiday?(%Date{year: year}) when year not in @supported_years do
+  @spec holiday?(Date.t()) :: boolean()
+  def holiday?(%Date{year: year}) when year not in @supported_years do
     Logger.warning(fn ->
       "the holiday information of #{year} isn't provided by current version of chinese_holiday"
     end)
@@ -81,10 +81,10 @@ defmodule ChineseHoliday do
     %{entry | date: Macro.escape(entry.date)}
   end)
   |> Enum.each(fn %{date: date} ->
-    def is_holiday?(unquote(date)), do: true
+    def holiday?(unquote(date)), do: true
   end)
 
-  def is_holiday?(_), do: false
+  def holiday?(_), do: false
 
   @doc """
   Checks if a given date is a working day.
@@ -97,35 +97,35 @@ defmodule ChineseHoliday do
   ## Examples
 
       # additional working days
-      iex> ChineseHoliday.is_working_day?(~D[2023-01-28])
+      iex> ChineseHoliday.working_day?(~D[2023-01-28])
       true
 
-      iex> ChineseHoliday.is_working_day?(~D[2023-01-29])
+      iex> ChineseHoliday.working_day?(~D[2023-01-29])
       true
 
       # weekdays in the duration of one holiday
-      iex> ChineseHoliday.is_working_day?(~D[2023-01-27])
+      iex> ChineseHoliday.working_day?(~D[2023-01-27])
       false
 
       # normal weekdays
-      iex> ChineseHoliday.is_working_day?(~D[2023-01-30])
+      iex> ChineseHoliday.working_day?(~D[2023-01-30])
       true
 
-      iex> ChineseHoliday.is_working_day?(~D[2023-01-31])
+      iex> ChineseHoliday.working_day?(~D[2023-01-31])
       true
 
       # normal weekends
-      iex> ChineseHoliday.is_working_day?(~D[2023-02-11])
+      iex> ChineseHoliday.working_day?(~D[2023-02-11])
       false
 
       # the working day information is missing, so this function doesn't know how to handle it.
       # in this case, it will log a warning message, and return `false`.
-      iex> ChineseHoliday.is_working_day?(~D[2090-01-28])
+      iex> ChineseHoliday.working_day?(~D[2090-01-28])
       false
 
   """
-  @spec is_working_day?(Date.t()) :: boolean()
-  def is_working_day?(%Date{year: year}) when year not in @supported_years do
+  @spec working_day?(Date.t()) :: boolean()
+  def working_day?(%Date{year: year}) when year not in @supported_years do
     Logger.warning(fn ->
       "the working day information of #{year} isn't provided by current version of chinese_holiday"
     end)
@@ -138,12 +138,12 @@ defmodule ChineseHoliday do
     %{entry | date: Macro.escape(entry.date)}
   end)
   |> Enum.each(fn %{date: date} ->
-    def is_working_day?(unquote(date)), do: true
+    def working_day?(unquote(date)), do: true
   end)
 
-  def is_working_day?(%Date{} = date) do
+  def working_day?(%Date{} = date) do
     %{year: year, month: month, day: day} = date
     weekday = :calendar.day_of_the_week(year, month, day)
-    !is_holiday?(date) and weekday in 1..5
+    !holiday?(date) and weekday in 1..5
   end
 end
