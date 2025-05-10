@@ -44,7 +44,7 @@ defmodule ChineseHoliday.MixProject do
 
   defp docs do
     [
-      extras: ["README.md", "CHANGELOG.md"],
+      extras: ["README.md", "CHANGELOG.md", "MAINTENANCE.md"],
       source_url: @source_url,
       source_ref: @version
     ]
