@@ -24,6 +24,10 @@ end
 
 For more information, see the [documentation](https://hexdocs.pm/chinese_holiday/ChineseHoliday.html).
 
+## Maintenance
+
+Read [MAINTENANCE.md](./MAINTENANCE.md).
+
 ## Acknowledgments
 
 The raw data comes from [`bastengao/chinese-holidays-data`](https://github.com/bastengao/chinese-holidays-data).
