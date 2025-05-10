@@ -32,6 +32,8 @@ Read [MAINTENANCE.md](./MAINTENANCE.md).
 
 The raw data comes from [`bastengao/chinese-holidays-data`](https://github.com/bastengao/chinese-holidays-data).
 
+If you, as a maintainer want to receive timely updates of raw data, you can subscribe [this](https://github.com/bastengao/chinese-holidays-data/commits/master.atom) via RSS.
+
 ## License
 
 Apache License 2.0
